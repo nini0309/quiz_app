@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {% for item in results %}
+        <div class="question">
+            <h3 class="decorate_inline">Category: {{ item.category }}</h3>
+            <h3 class="decorate_inline">Type: {{ item.type }}</h3>
+            <h3 class="decorate_inline">Difficulty: {{ item.difficulty }}</h3>
+            <h1 class="decorate">Question: {{ item.question }}</h1>
+            <div class="decorate">
+                <input type="radio" value="correct" name="{{ item.question }}">{{ item.correct_answer }}
+            </div>
+            {% for i in item.incorrect_answers %}
+            <div class="decorate">
+                <input type="radio" value="{{ i }}" name="{{ item.question }}">{{ i }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <input type="submit" class="submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script:wght@300;400;500;600&display=swap");
+
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2018/03/21/07/16/learning-3245793_1280.jpg");
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_text {
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Kaushan Script", sans-serif;
+  /* background: #011520; */
+}
+
+.question {
+  margin: auto;
+  width: 60%;
+  border: 5px double #FFF;
+  padding: 10px;
+  text-align: center;
+  /* background: #011520; */
+}
+.decorate {
+  background: #011520;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+.decorate_inline {
+  background: #011520;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+
+}
+
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #011520;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+a.button:hover {
+  background-color: #0D415A;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.submit {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #0f9de9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.submit:hover {
+  background-color: #000;
+}
